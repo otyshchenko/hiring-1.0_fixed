@@ -28,9 +28,9 @@ public class ConsoleGeoProgram {
                 GeoCoder geoCoder = new DummyGeoCoder();
                 Coordinates coordinates = geoCoder.lookupCoordinates(coordinatesDetails);
                 line = String.format("Address is: %1s, Latitude is: %2$,.2f ,Longitude is : %3$,.2f \n", address, coordinates.getLatitude(), coordinates.getLongitude());
-              
-            } finally {
                 fileWriter.write(line);
+
+            } finally {
                 fileWriter.flush();
             }
 
